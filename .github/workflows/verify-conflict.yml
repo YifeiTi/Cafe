@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check if brew() is implemented
         id: precheck
         run: |
-          if grep -qE 'STUDENT_TODO_2A|STUDENT_TODO_2B' CommitCafe.java; then
+          if grep -q 'STUDENT_TODO_2A' CommitCafe.java; then
             echo "skip=true" >> "$GITHUB_OUTPUT"
             echo "brew() not yet implemented — skipping verification."
           else
@@ -25,7 +25,7 @@ jobs:
 
       - name: Set up Java
         if: steps.precheck.outputs.skip == 'false'
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'

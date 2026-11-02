@@ -21,11 +21,6 @@ PUNS = [
 ]
 
 COMMIT_MESSAGES = [
-    "fix: update brew logic after coffee review",
-    "feature: add caffeinated brew status message",
-    "refactor: simplify brew implementation",
-]
-COMMIT_MESSAGES = [
     "fix: update starter implementation",
     "feature: add CoffeeBot change",
     "refactor: adjust starter code",
@@ -50,7 +45,7 @@ replacements = {
     ),
     "TODO_1B": (
         r'//\s*STUDENT_TODO_1B:\s*Add a nickname or title for the barista',
-        'private static String title = "[Lead Barista]"; // STUDENT_TODO_1B: Add a nickname or title for the barista'
+        'private static String title = "[Lead Barista]";'
     ),
     "TODO_2A": (
         r'//\s*STUDENT_TODO_2A:\s*Implement\s*-\s*add 1 to cups\s*&\s*print a message',
@@ -58,7 +53,7 @@ replacements = {
     ),
     "TODO_2B": (
         r'//\s*STUDENT_TODO_2B:\s*Add a second brew-related improvement',
-        'System.out.println("[BOT CHECK] drink length = " + drink.length()); // STUDENT_TODO_2B: Add a second brew-related improvement'
+        'System.out.println("[BOT CHECK] drink length = " + drink.length());'
     ),
 }
 
